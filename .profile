@@ -1,5 +1,7 @@
 export PATH=/usr/local/share/python:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7.1/bin:~/bin:~/.gem/ruby/1.8/bin:$PATH
-export EDITOR='subl -w'
+export EDITOR="$HOME/bin/mate -w"
+export LC_ALL=sv_SE.UTF-8
+export LANG=sv_SE.UTF-8
 
 if [ -f /usr/local/etc/bash_completion ]; then
       . /usr/local/etc/bash_completion
@@ -10,11 +12,10 @@ export LS_OPTIONS='-G'
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
-alias esp='open -a Espresso'
 
 source ~/src/django-trunk-svn/extras/django_bash_completion
 
-export WORKON_HOME=~/.virtualenvs
+export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
@@ -29,7 +30,7 @@ djdump() {
 }
 alias djr='dj runserver'
 alias djs='dj syncdb'
-alias djshell='dj shell'
+alias djsh='dj shell'
 
 has_virtualenv() {
     if [ -e .venv ]; then
