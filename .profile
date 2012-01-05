@@ -13,7 +13,7 @@ alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
 
-source ~/src/django-trunk-svn/extras/django_bash_completion
+source `which pycompletion`
 
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
