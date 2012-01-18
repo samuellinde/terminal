@@ -28,7 +28,7 @@ dj() {
 djdump() {
     python manage.py dumpdata $1 > initial_data.json --settings=settings_dev
 }
-alias djr='dj runserver'
+alias djr='dj runserver 0.0.0.0:8000'
 alias djs='dj syncdb'
 alias djsh='dj shell'
 
