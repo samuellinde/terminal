@@ -5,26 +5,25 @@ fontSize         = 12
 
 # Extra files to include
 #
-myExtraIncludes = ".tm_properties,.htaccess,.gitignore"
+myExtraIncludes = ".tm_properties,.htaccess,.gitignore,.requirements.txt"
 fileBrowserGlob  = "{*,$myExtraIncludes}"
 include = "{$include,$myExtraIncludes}"
 
 # Hide log, vendor and tmp directories from search popups.
 #
-myExtraExcludes = "log,vendor,tmp"
+myExtraExcludes = "log,vendor,tmp,*.pyc,*.db"
 excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}" 
 excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}" 
 
 # If you also want to hide them from your project manager pane, add
 # the following line to your project's local .tm_properties.
 #
-# excludeInBrowser      = "{$excludeInBrowser,log,vendor,tmp}" 
-
+excludeInBrowser      = "{$excludeInBrowser,log,vendor,tmp,*.pyc,*.db}" 
 
 # Configure git and hg
 #
-TM_HG  = "/opt/local/bin/hg"
-TM_GIT = "/opt/local/bin/git"
+TM_HG  = "/usr/local/bin/hg"
+TM_GIT = "/usr/local/bin/git"
 
 # Default editing configuration
 #

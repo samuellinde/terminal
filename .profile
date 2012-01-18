@@ -12,6 +12,7 @@ export LS_OPTIONS='-G'
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
+alias mkdir='mkdir -p'
 
 source `which pycompletion`
 
@@ -26,7 +27,7 @@ dj() {
     python manage.py $1 --settings=settings_dev $2
 }
 djdump() {
-    python manage.py dumpdata $1 > initial_data.json --settings=settings_dev
+    python manage.py dumpdata $1 > initial_data.json --settings=settings_dev --indent=4
 }
 alias djr='dj runserver'
 alias djs='dj syncdb'
